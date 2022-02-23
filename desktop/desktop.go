@@ -25,7 +25,7 @@ func QueryService(clsid, iid *ole.GUID, ppvObject uintptr) error {
 	return err
 }
 
-// call Release to recycal object
+// call Release to recycle object
 func NewIVirtualDesktopManagerInternal() (*IVirtualDesktopManagerInternal, error) {
 	var obj *IVirtualDesktopManagerInternal
 	err := QueryService(
@@ -36,7 +36,7 @@ func NewIVirtualDesktopManagerInternal() (*IVirtualDesktopManagerInternal, error
 	return obj, err
 }
 
-// call Release to recycal object
+// call Release to recycle object
 func NewIVirtualDesktopManager() (*IVirtualDesktopManager, error) {
 	var obj *IVirtualDesktopManager
 	err := QueryService(
@@ -47,7 +47,7 @@ func NewIVirtualDesktopManager() (*IVirtualDesktopManager, error) {
 	return obj, err
 }
 
-// call Release to recycal object
+// call Release to recycle object
 func NewIApplicationViewCollection() (*IApplicationViewCollection, error) {
 	var obj *IApplicationViewCollection
 	err := QueryService(
@@ -58,7 +58,7 @@ func NewIApplicationViewCollection() (*IApplicationViewCollection, error) {
 	return obj, err
 }
 
-// call Release to recycal object
+// call Release to recycle object
 func NewIVirtualDesktopPinnedApps() (*IVirtualDesktopPinnedApps, error) {
 	var obj *IVirtualDesktopPinnedApps
 	err := QueryService(
