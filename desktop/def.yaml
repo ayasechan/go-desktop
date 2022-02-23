@@ -1,0 +1,185 @@
+- className: 'IApplicationView'
+  from: 'ole.IInspectable'
+  iid: '372E1D3B-38D3-42E4-A15B-8AB2B178F513'
+  methods:
+    - name: 'SetFocus'
+    - name: 'SwitchTo'
+    - name: 'TryInvokeBack'
+      args:
+        - name: 'p0'
+          type: '*IAsyncCallback'
+    - name: 'GetThumbnailWindow'
+      args:
+        - name: 'p0'
+          type: 'uintptr'
+          idlFlags: ['out', 'retval']
+    - name: 'GetMonitor'
+      args:
+        - name: 'p0'
+          type: '*IImmersiveMonitor'
+          idlFlags: ['out', 'retval']
+    - name: 'GetVisibility'
+      args:
+        - name: 'p0'
+          type: 'int'
+          idlFlags: ['out', 'retval']
+    - name: 'SetCloak'
+      args:
+        - name: 'p0'
+          type: 'APPLICATION_VIEW_CLOAK_TYPE'
+        - name: 'p1'
+          type: 'uint'
+    - name: 'GetPosition'
+    - name: 'SetPosition'
+    - name: 'InsertAfterWindow'
+    - name: 'GetExtendedFramePosition'
+    - name: 'GetAppUserModelId'
+    - name: 'SetAppUserModelId'
+    - name: 'IsEqualByAppUserModelId'
+    - name: 'GetViewState'
+    - name: 'SetViewState'
+    - name: 'GetNeediness'
+    - name: 'GetLastActivationTimestamp'
+    - name: 'SetLastActivationTimestamp'
+    - name: 'GetVirtualDesktopId'
+    - name: 'SetVirtualDesktopId'
+    - name: 'GetShowInSwitchers'
+    - name: 'SetShowInSwitchers'
+    - name: 'GetScaleFactor'
+    - name: 'CanReceiveInput'
+    - name: 'GetCompatibilityPolicyType'
+    - name: 'SetCompatibilityPolicyType'
+    - name: 'GetSizeConstraints'
+    - name: 'GetSizeConstraintsForDpi'
+    - name: 'SetSizeConstraintsForDpi'
+    - name: 'OnMinSizePreferencesUpdated'
+    - name: 'ApplyOperation'
+    - name: 'IsTray'
+    - name: 'IsInHighZOrderBand'
+    - name: 'IsSplashScreenPresented'
+    - name: 'Flash'
+    - name: 'GetRootSwitchableOwner'
+    - name: 'EnumerateOwnershipTree'
+    - name: 'GetEnterpriseId'
+    - name: 'IsMirrored'
+    - name: 'Unknown1'
+    - name: 'Unknown2'
+    - name: 'Unknown3'
+    - name: 'Unknown4'
+    - name: 'Unknown5'
+    - name: 'Unknown6'
+    - name: 'Unknown7'
+    - name: 'Unknown8'
+    - name: 'Unknown9'
+    - name: 'Unknown10'
+    - name: 'Unknown11'
+    - name: 'Unknown12'
+
+- className: 'IApplicationViewCollection'
+  from: 'ole.IUnknown'
+  iid: '1841C6D7-4F9D-42C0-AF41-8747538F10E5'
+  methods:
+    - name: 'GetViews'                            
+    - name: 'GetViewsByZOrder'                    
+    - name: 'GetViewsByAppUserModelId'            
+    - name: 'GetViewForHwnd'                      
+    - name: 'GetViewForApplication'               
+    - name: 'GetViewForAppUserModelId'            
+    - name: 'GetViewInFocus'                      
+    - name: 'Unknown1'                            
+    - name: 'RefreshCollection'                   
+    - name: 'RegisterForApplicationViewChanges'   
+    - name: 'UnregisterForApplicationViewChanges' 
+  
+- className: 'IApplicationViewConsolidatedEventArgs'
+  from: 'ole.IInspectable'
+  iid: '514449EC-7EA2-4DE7-A6A6-7DFBAAEBB6FB'
+  methods:
+    - name: 'GetIsUserInitiated'
+
+- className: 'IVirtualDesktopNotification'
+  from: 'ole.IUnknown'
+  iid: 'C179334C-4295-40D3-BEA1-C654D965605A'
+  methods:
+    - name: 'VirtualDesktopCreated'
+    - name: 'VirtualDesktopDestroyBegin'
+    - name: 'VirtualDesktopDestroyFailed'
+    - name: 'VirtualDesktopDestroyed'
+    - name: 'ViewVirtualDesktopChanged'
+    - name: 'CurrentVirtualDesktopChanged'
+
+- className: 'IVirtualDesktopNotificationService'
+  from: 'ole.IUnknown'
+  iid: '0CD45E71-D927-4F15-8B0A-8FEF525337BF'
+  methods:
+    - name: 'Register'   
+    - name: 'Unregister' 
+
+- className: 'IVirtualDesktopPinnedApps'
+  from: 'ole.IUnknown'
+  iid: '4CE81583-1E4C-4632-A621-07A53543148F'
+  methods:
+    - name: 'IsAppIdPinned' 
+    - name: 'PinAppID'      
+    - name: 'UnpinAppID'    
+    - name: 'IsViewPinned'  
+    - name: 'PinView'       
+    - name: 'UnpinView'     
+
+- className: 'IObjectArray'
+  from: 'ole.IUnknown'
+  iid: '92CA9DCD-5622-4BBA-A805-5E9F541BD8C9'
+  methods: 
+    - name: GetCount
+      args:
+        - name: 'count'
+          type: 'uint'
+          idlFlags: ['out', 'retval']
+    - name: GetAt
+      args:
+        - name: 'idx'
+          type: 'uint'
+        - name: 'riid'
+          type: '*ole.GUID'
+        - name: 'ppv'
+          type: 'uintptr'
+
+- className: 'IServiceProvider'
+  from: 'ole.IUnknown'
+  iid: '6D5140C1-7436-11CE-8034-00AA006009FA'
+  methods: 
+    - name: 'QueryService'
+      args:
+        - name: 'guidService'
+          type: '*ole.GUID'
+        - name: 'riid'
+          type: '*ole.GUID'
+        - name: 'ppvObject'
+          type: 'uintptr'
+
+- className: 'IVirtualDesktopManager'
+  from: 'ole.IUnknown'
+  iid: 'A5CD92FF-29BE-454C-8D04-D82879FB3F1B'
+  methods: 
+    - name: 'IsWindowOnCurrentVirtualDesktop' 
+      args:
+        - name: 'hwnd'
+          type: 'uintptr'
+        - name: 'r'
+          type: 'bool'
+          idlFlags: ['out', 'retval']
+    - name: 'GetWindowDesktopId'
+      comment: '不能传入桌面的句柄 否则会报错'
+      args: 
+        - name: 'hwnd'      
+          type: 'uintptr'
+        - name: 'id'
+          type: 'ole.GUID'
+          idlFlags: ['out', 'retval']
+    - name: 'MoveWindowToDesktop'
+      comment: 'https://stackoverflow.com/questions/32659505/windows-10-ivirtualdesktopmanagermovewindowtodesktop'
+      args:
+        - name: 'hwnd'             
+          type: 'uintptr'
+        - name: 'id'
+          type: 'ole.GUID'

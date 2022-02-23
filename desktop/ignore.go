@@ -1,0 +1,13 @@
+package desktop
+
+// ignore following APIs
+
+type IAsyncCallback uintptr
+type IImmersiveMonitor uintptr
+type APPLICATION_VIEW_COMPATIBILITY_POLICY uintptr
+type IShellPositionerPriority uintptr
+type IApplicationViewOperation uintptr
+type APPLICATION_VIEW_CLOAK_TYPE uintptr
+type IApplicationViewPosition uintptr
+type IImmersiveApplication uintptr
+type IApplicationViewChangeListener uintptr
